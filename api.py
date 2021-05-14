@@ -4,16 +4,17 @@ import json
 
 app = Flask(__name__)
 
-
-@app.route('/<string:location>')
+@app.route('/api/<location>')
 def index(location):
-  data = new_func(location)
+  data = get_urban_salary_data(location)
   return data
 
-def new_func(location):
-    req = requests.get('https://api.teleport.org/api/cities/?search=denver')
-    data = json.loads(req.content)
-    return data['_embedded']['city:search-results'][0]['_links']['city:item']['href']
+def get_urban_salary_data(location):
+  params = {"slug:": location}
+  req = requests.get("https://api.teleport.org/api/urban_areas/slug:%s/salaries" % location)
+  data = json.loads(req.content)
+  salaries = {"salaries": data["salaries"]}
+  return salaries
 
 if __name__ == '__main__':
-    app.run(debug=True)
+  app.run(debug=True)
