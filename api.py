@@ -16,5 +16,5 @@ def get_urban_salary_data(location):
   salaries = {"salaries": data["salaries"]}
   return salaries
 
-if __name__ == '__main__':
-  app.run(debug=True)
+# if __name__ == '__main__':
+#   app.run(debug=True)
