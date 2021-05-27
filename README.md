@@ -1,5 +1,5 @@
 # teleport_mircoservice
-Sweater Weather is an api that can allow a user to plan road trips. When your current location and desired location are given this app will give you great info about your newly planned trip! You will get the length of time the trip will take and the current weather when you arrive, and more!
+This flask microservice consumes urban city data from the teleport api. It then exposes a new end point showing tech job's maximum and minimum salary data for a specified city.
 ## Summary
 
   - [Getting Started](#getting-started)
@@ -17,17 +17,14 @@ for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-* __Ruby__
+* __Python__
 
-  - The project is built with ruby on rails using __ruby version 2.5.3p105__, install ruby on your local machine first. Please visit the [ruby](https://www.ruby-lang.org/en/documentation/installation/) home page to get set up. _Please ensure you install the version of ruby noted above._
+  - The project is built with Python 3.9.5
 
-* __Rails__
+* __Flask__
   ```
-  gem install rails --version 5.2.5
+  pip install flask
   ```
-
-* __Postgres database__
-  - Visit the [postgresapp](https://postgresapp.com/downloads.html) homepage and follow their instructions to download the latest version of Postgres app.
 
 ### Installing
 
